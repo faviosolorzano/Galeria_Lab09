@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria de Imagenes - Lab S3</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="toasts" aria-live="assertive"></div>
+
+  <header>
+    <h1>Mi Galeria en S3</h1>
+    <p>Bucket privado. Subida y descarga con URLs prefirmadas.</p>
+  </header>
+
+  <section id="uploader">
+    <div id="dropzone">
+      <p>Arrastra una imagen aqui o</p>
+      <input type="file" id="file">
+      <p class="hint">Permitido: JPG, PNG o WEBP. Maximo 5 MB.</p>
+    </div>
+    <div id="fileInfo"></div>
+    <button id="uploadBtn">Subir</button>
+    <div id="status" role="status"></div>
+  </section>
+
+  <section>
+    <h2>Galeria</h2>
+    <div id="gallery"></div>
+  </section>
+
+  <section id="testPanel">
+    <h2>Panel de pruebas del laboratorio</h2>
+    <p class="hint">Estos botones llaman directo al backend, sin pasar por la validacion del navegador.</p>
+    <div class="row">
+      <button id="testBig" class="warn">Backend: archivo de 10 MB</button>
+      <button id="testPdf" class="warn">Backend: tipo PDF</button>
+    </div>
+    <h3>Ultima solicitud</h3>
+    <pre id="log">Aun no se ha hecho ninguna solicitud.</pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
